@@ -1,0 +1,279 @@
+@charset "utf-8";
+
+body{ 
+    font-family: 'Noto Sans TC', 'sans-serif';
+    letter-spacing: .02em;
+}
+a{  
+    text-decoration: none;
+}
+.snsBar{ 
+    background: #F6F6F8;
+    padding: 6px 30px 7px 6px;
+    overflow: hidden; /*清除浮動*/
+}
+.sns li{
+    display: block; 
+    float: right;
+    padding-right: 15px;
+    letter-spacing: .04em;
+}
+.header .snsBar .border{
+    color:#999;
+    padding-top: 2px;
+}
+.sns img{
+    margin-top: 3px;
+}
+.sns a { /*推特顏色*/
+    color: #1DA1F2;
+    padding: 0 5px;
+}
+.snsBar .sns span { /*臉書顏色*/
+    color: #4267B2;
+}
+.snsBar .sns a :hover{ /*亮亮特效*/
+    filter: brightness(135%);
+}
+.navBar{ 
+    padding: 22px;
+    background: #FFF;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+}
+.navBar ul li{
+    display: inline;
+}
+.navBar h1{ 
+    text-indent: -9999px; /*把字推出去出*/
+    background-image: url('../../hexscool_homework/images/hexschool-logo.svg');  /*背景圖*/
+    background-size: cover;
+    width: 150.061px; /*原圖寬度*/
+    height: 36px; /*原圖高度*/
+}
+.menuBtn{
+    float: right;
+    transform: translate(0, -70%);
+}
+.menuBtn li a {
+    color: #00251A;
+    padding: 30px;
+    font-weight: 600;
+}
+.menuBtn li a:hover{ /*菜單特效*/
+    color: #00cc99;
+}
+.menuBtn a {
+    text-align: center;
+    letter-spacing: 0.1em;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+  }
+  .menuBtn li :before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 51%;
+    right: 51%;
+    bottom: 0;
+    background: #00cc99;
+    height: 4px;
+    -webkit-transition-property: left, right;
+    transition-property: left, right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  .menuBtn :hover:before,
+  .hvr-underline-from-center:focus:before,
+  .hvr-underline-from-center:active:before {
+    left: 0;
+    right: 0;/*特效結束*/
+  } 
+.bannerSec{
+    max-width: 1920px;
+    height: 390px;
+    background: url(../../hexscool_homework/images/headerBg.png) no-repeat center center/cover;
+    z-index: -10;  /*底圖壓底*/
+    margin: auto;  
+}
+.header{
+    position:sticky;
+    top:0px;
+    z-index: 30;
+}
+h2{
+    font-size: 36px;
+    color: #1E1E1E;
+    font-weight: 600;
+    letter-spacing: .02em;
+    line-height: 130%; /* 43.2px */
+    display: block;
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 25px 150px;
+    position: relative;
+    transform: translateY(90%);
+}
+.courseInfo{ /*課程資訊*/
+    padding: 60px;
+    justify-content: center;  
+}
+.courseInfo .courseList {
+    display: flex;
+    justify-content: center;
+}
+.courseInfo .courseList li {
+    width: 320px;
+    padding: 20px;
+    margin: 0 15px;
+    background: #FFF;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.16);
+}
+.courseInfo .courseList img{
+    display: block;
+    margin: 0 auto;
+}
+.courseInfo .courseList li .jq{
+    margin: 45px auto;
+}
+.courseInfo .courseList h4{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 120%; /* 24px */
+    text-align: center;
+    margin: 5px 0 15px;
+}
+.courseList p{
+    width: 310px;
+    color: #00251A;
+    font-weight: 400;
+    line-height: 155%; /*課程資訊結束*/
+}
+h3{
+    font-size: 24px; /*比較區*/
+    font-weight: 600;
+    line-height: 130%; 
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+.compareSec table{
+    width: 920px;
+    margin: 0 auto 60px;
+}
+.compareSec table tbody th, td{
+    color: #00251A;
+    text-align: left;
+    letter-spacing: 0.02em;
+    padding: 12px 0px;
+    text-indent: 10px;
+    border-bottom: 1px solid #CCC;;
+}
+.compareSec table tbody th{
+    border-top: 1px solid #CCC;
+    font-weight: 600;
+}
+.compareSec table tbody .better{
+    color: #00cc99;
+    font-weight: 600;
+}
+.submitSec{ /*資料表單*/
+    background: linear-gradient(180deg, #E4FFF8 0%, #A2DDCE 100%);
+    padding-top: 16px;
+}
+.submitSec h3{
+    margin-top: 17px;
+}
+.submitSec label{
+    color: #00251A;
+    line-height: 120%;
+}
+.studentInfo{
+    max-width: 750px;
+    margin: 0 auto;
+    overflow:hidden;
+}
+.studentInfo input{
+    margin-top: 2px; 
+    margin-bottom: 23px;
+}
+#submitLeft{
+    width:370px;
+    float:left;
+}
+#submitRight{
+    width:370px;
+    float: right;
+}
+#submitCenter{
+    clear:both;
+    display: flex;
+}
+.studentInfo textarea{
+    width: 350px;
+    margin-top: 2px; 
+    height: 198px;
+    border-radius: 3px;
+    border: 1px solid #AAA;
+    background: #FFF;
+}
+input{
+    width: 350px;
+    height: 34px;
+    border-radius: 3px;
+    border: 1px solid #AAA;
+    background: #FFF;
+    padding-left: 3px;
+}
+#submitBtn{ 
+    width: 159px;
+    height: 37px;
+    border-radius: 3px;
+    border: 1px solid #00251A;
+    color: #FFF;
+    background: #00251A;
+    margin: 7px auto 40px;
+    padding-left: 6px;
+}
+#submitBtn:hover{
+    filter: brightness(150%);
+    cursor: pointer;
+    box-shadow: rgba(138, 191, 136, 0.4) 6px 2px 16px 0px, rgba(255, 255, 255, 0.5) -6px -2px 16px 0px;
+}
+
+::placeholder {
+    color: #999;
+    line-height: 150%; /* 24px */
+    letter-spacing: 0.02em;
+}
+footer{ /*表尾開始*/
+    background: #F6F6F8;
+    padding: 13px;
+}
+.contactUs{
+    padding: 6px;
+    overflow: hidden; /* 清除浮動 */
+}
+.contactUs image {
+    display: block;
+    padding-left: 10px;
+}
+.contactUs p{
+    display: block; 
+    float: right;
+    margin-right: 40px;
+    line-height: 1.5;
+    padding: 5px;
+}
+.contactUs span{
+    color: #00cc99;
+}
+footer .contactUs img{
+    margin-top: 10px;
+}
