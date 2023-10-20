@@ -9,25 +9,31 @@ a{
 }
 .snsBar{ 
     background: #F6F6F8;
-    padding: 6px 30px 7px 6px;
+    padding: 4px 30px 9px 6px;
     overflow: hidden; /*清除浮動*/
+}
+.sns{
+    float: right; 
 }
 .sns li{
     display: block; 
-    float: right;
-    padding-right: 15px;
-    letter-spacing: .04em;
+    float: left;
+    padding-right: 10px;
+}
+.sns .fb{
+    border-right: 1px solid #CCC;
 }
 .header .snsBar .border{
-    color:#999;
     padding-top: 2px;
 }
 .sns img{
     margin-top: 3px;
+    margin-right: 2px;
 }
 .sns a { /*推特顏色*/
+    letter-spacing: .04em;
     color: #1DA1F2;
-    padding: 0 5px;
+    padding: 2px 20px 4px;
 }
 .snsBar .sns span { /*臉書顏色*/
     color: #4267B2;
