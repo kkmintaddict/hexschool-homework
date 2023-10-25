@@ -2,33 +2,36 @@
 
 body{ 
     font-family: 'Noto Sans TC', 'sans-serif';
-    letter-spacing: .02em;
+    letter-spacing: .03em;
+    align-items: center;
+    width: 100%;
+    overflow-x:hidden; /* 不可水平滾動 */
+    overflow-y: auto;  /* 允許垂直滾動 */
 }
 a{  
     text-decoration: none;
 }
 .snsBar{ 
     background: #F6F6F8;
-    padding: 4px 30px 9px 6px;
+    padding: 10px 30px;
     overflow: hidden; /*清除浮動*/
 }
 .sns{
-    float: right; 
+    float: right;   /*靠右*/
 }
 .sns li{
     display: block; 
-    float: left;
-    padding-right: 10px;
+    float: left;     
+    padding-right: 5px;
 }
 .sns .fb{
     border-right: 1px solid #CCC;
 }
-.header .snsBar .border{
+header .snsBar .border{
     padding-top: 2px;
 }
 .sns img{
-    margin-top: 3px;
-    margin-right: 2px;
+    vertical-align: bottom;
 }
 .sns a { /*推特顏色*/
     letter-spacing: .04em;
@@ -42,7 +45,7 @@ a{
     filter: brightness(135%);
 }
 .navBar{ 
-    padding: 22px;
+    padding: 22px 22px 22px 50px;
     background: #FFF;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
 }
@@ -60,7 +63,7 @@ a{
     float: right;
     transform: translate(0, -70%);
 }
-.menuBtn li a {
+.menuBtn li a{
     color: #00251A;
     padding: 30px;
     font-weight: 600;
@@ -69,7 +72,6 @@ a{
     color: #00cc99;
 }
 .menuBtn a {
-    text-align: center;
     letter-spacing: 0.1em;
     display: inline-block;
     vertical-align: middle;
@@ -78,8 +80,8 @@ a{
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
     position: relative;
     overflow: hidden;
-  }
-  .menuBtn li :before {
+}
+.menuBtn li :before {
     content: "";
     position: absolute;
     z-index: -1;
@@ -94,19 +96,19 @@ a{
     transition-duration: 0.3s;
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
-  }
-  .menuBtn :hover:before,
-  .hvr-underline-from-center:focus:before,
-  .hvr-underline-from-center:active:before {
+}
+.menuBtn :hover:before,
+.hvr-underline-from-center:focus:before,
+.hvr-underline-from-center:active:before {
     left: 0;
     right: 0;/*特效結束*/
-  } 
+} 
 .bannerSec{
-    max-width: 1920px;
     height: 390px;
     background: url(../../hexscool_homework/images/headerBg.png) no-repeat center center/cover;
     z-index: -10;  /*底圖壓底*/
-    margin: auto;  
+    margin: 0 auto; 
+    position: relative; 
 }
 .header{
     position:sticky;
@@ -115,6 +117,7 @@ a{
 }
 h2{
     font-size: 36px;
+    width: 100%;
     color: #1E1E1E;
     font-weight: 600;
     letter-spacing: .02em;
@@ -122,18 +125,16 @@ h2{
     display: block;
     background-color: rgba(255, 255, 255, 0.15);
     padding: 25px 150px;
-    position: relative;
-    transform: translateY(90%);
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
 }
-.courseInfo{ /*課程資訊*/
-    padding: 60px;
-    justify-content: center;  
-}
-.courseInfo .courseList {
+.courseList {  /*課程資訊*/
     display: flex;
-    justify-content: center;
+    padding: 60px;
+    justify-content:center;
 }
-.courseInfo .courseList li {
+.courseList > li {
     width: 320px;
     padding: 20px;
     margin: 0 15px;
@@ -141,14 +142,14 @@ h2{
     border-radius: 5px;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.16);
 }
-.courseInfo .courseList img{
+.courseList img{
     display: block;
     margin: 0 auto;
 }
-.courseInfo .courseList li .jq{
+.courseList li .jq{
     margin: 45px auto;
 }
-.courseInfo .courseList h4{
+.courseList h4{
     font-size: 20px;
     font-weight: 600;
     line-height: 120%; /* 24px */
@@ -161,125 +162,130 @@ h2{
     font-weight: 400;
     line-height: 155%; /*課程資訊結束*/
 }
-h3{
+caption{
     font-size: 24px; /*比較區*/
     font-weight: 600;
     line-height: 130%; 
     text-align: center;
-    padding: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 40px;
 }
 .compareSec table{
     width: 920px;
-    margin: 0 auto 60px;
+    margin: 0 auto 70px;
 }
 .compareSec table tbody th, td{
     color: #00251A;
     text-align: left;
     letter-spacing: 0.02em;
     padding: 12px 0px;
-    text-indent: 10px;
+    text-indent: 40px;
     border-bottom: 1px solid #CCC;;
 }
 .compareSec table tbody th{
     border-top: 1px solid #CCC;
     font-weight: 600;
+    background-color: #eff1ed80;
+}
+.compareSec table tbody tr:hover{
+    background-color: #eff1ed40;
 }
 .compareSec table tbody .better{
     color: #00cc99;
     font-weight: 600;
 }
 .submitSec{ /*資料表單*/
-    background: linear-gradient(180deg, #E4FFF8 0%, #A2DDCE 100%);
-    padding-top: 16px;
+    background: linear-gradient(180deg, #00654c, #009670);
+    padding: 40px;
 }
 .submitSec h3{
-    margin-top: 17px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #FFF;
+    line-height: 1.5; 
+    text-align: center;
+    margin-bottom: 50px;
 }
 .submitSec label{
-    color: #00251A;
-    line-height: 120%;
+    color: #FFF;
+    line-height: 1.4;
+    font-size: 14px;
 }
 .studentInfo{
-    max-width: 750px;
+    max-width: 860px;
     margin: 0 auto;
-    overflow:hidden;
-}
-.studentInfo input{
-    margin-top: 2px; 
-    margin-bottom: 23px;
+    overflow: hidden;
 }
 #submitLeft{
-    width:370px;
+    width:420px;
     float:left;
 }
 #submitRight{
-    width:370px;
+    width:420px;
     float: right;
 }
-#submitCenter{
-    clear:both;
-    display: flex;
-}
 .studentInfo textarea{
-    width: 350px;
-    margin-top: 2px; 
-    height: 198px;
+    width: 420px;
+    height: 240px;
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
     border-radius: 3px;
-    border: 1px solid #AAA;
     background: #FFF;
+    padding: 8px;
+    outline: #00654c;
 }
 input{
-    width: 350px;
+    width: 420px;
     height: 34px;
+    width: 100%;
+    box-sizing: border-box;
     border-radius: 3px;
-    border: 1px solid #AAA;
+    border: 1px solid #FFF;
     background: #FFF;
-    padding-left: 3px;
+    padding: 0 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    outline: #00654c;
 }
 #submitBtn{ 
-    width: 159px;
-    height: 37px;
+    width: 90px;
+    height: 35px;
+    box-sizing: border-box;
     border-radius: 3px;
-    border: 1px solid #00251A;
+    border: none;
     color: #FFF;
-    background: #00251A;
-    margin: 7px auto 40px;
-    padding-left: 6px;
+    background: #00cc99;
+    margin-top: 10px; 
+    float: right;   
 }
 #submitBtn:hover{
-    filter: brightness(150%);
     cursor: pointer;
-    box-shadow: rgba(138, 191, 136, 0.4) 6px 2px 16px 0px, rgba(255, 255, 255, 0.5) -6px -2px 16px 0px;
+    background-color: transparent;
+    border: 1.5px solid #FFF;
+    color: #FFF;
+    transition: all 0.3s;
 }
-
+#submitBtn:active{
+    background-color:hwb(163 0% 85% / 0.206) ;
+}
 ::placeholder {
     color: #999;
     line-height: 150%; /* 24px */
     letter-spacing: 0.02em;
 }
-footer{ /*表尾開始*/
-    background: #F6F6F8;
-    padding: 13px;
-}
-.contactUs{
-    padding: 6px;
+.contactUs{ /*表尾開始*/
+    background: #fff;
+    padding: 20px 50px;
     overflow: hidden; /* 清除浮動 */
 }
-.contactUs image {
-    display: block;
-    padding-left: 10px;
-}
-.contactUs p{
-    display: block; 
-    float: right;
-    margin-right: 40px;
-    line-height: 1.5;
-    padding: 5px;
-}
-.contactUs span{
-    color: #00cc99;
-}
-footer .contactUs img{
+.contactUs img {
     margin-top: 10px;
+}
+.contactUs ul{
+    float: right;
+    line-height: 1.5;
+}
+.contactUs ul a{
+    text-decoration: none;
+    color: #00cc99;
 }
