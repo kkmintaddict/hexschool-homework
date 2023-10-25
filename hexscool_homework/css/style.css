@@ -1,0 +1,291 @@
+@charset "utf-8";
+
+body{ 
+    font-family: 'Noto Sans TC', 'sans-serif';
+    letter-spacing: .03em;
+    align-items: center;
+    width: 100%;
+    overflow-x:hidden; /* 不可水平滾動 */
+    overflow-y: auto;  /* 允許垂直滾動 */
+}
+a{  
+    text-decoration: none;
+}
+.snsBar{ 
+    background: #F6F6F8;
+    padding: 10px 30px;
+    overflow: hidden; /*清除浮動*/
+}
+.sns{
+    float: right;   /*靠右*/
+}
+.sns li{
+    display: block; 
+    float: left;     
+    padding-right: 5px;
+}
+.sns .fb{
+    border-right: 1px solid #CCC;
+}
+header .snsBar .border{
+    padding-top: 2px;
+}
+.sns img{
+    vertical-align: bottom;
+}
+.sns a { /*推特顏色*/
+    letter-spacing: .04em;
+    color: #1DA1F2;
+    padding: 2px 20px 4px;
+}
+.snsBar .sns span { /*臉書顏色*/
+    color: #4267B2;
+}
+.snsBar .sns a :hover{ /*亮亮特效*/
+    filter: brightness(135%);
+}
+.navBar{ 
+    padding: 22px 22px 22px 50px;
+    background: #FFF;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+}
+.navBar ul li{
+    display: inline;
+}
+.navBar h1{ 
+    text-indent: -9999px; /*把字推出去出*/
+    background-image: url('../../hexscool_homework/images/hexschool-logo.svg');  /*背景圖*/
+    background-size: cover;
+    width: 150.061px; /*原圖寬度*/
+    height: 36px; /*原圖高度*/
+}
+.menuBtn{
+    float: right;
+    transform: translate(0, -70%);
+}
+.menuBtn li a{
+    color: #00251A;
+    padding: 30px;
+    font-weight: 600;
+}
+.menuBtn li a:hover{ /*菜單特效*/
+    color: #00cc99;
+}
+.menuBtn a {
+    letter-spacing: 0.1em;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+}
+.menuBtn li :before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 51%;
+    right: 51%;
+    bottom: 0;
+    background: #00cc99;
+    height: 4px;
+    -webkit-transition-property: left, right;
+    transition-property: left, right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+.menuBtn :hover:before,
+.hvr-underline-from-center:focus:before,
+.hvr-underline-from-center:active:before {
+    left: 0;
+    right: 0;/*特效結束*/
+} 
+.bannerSec{
+    height: 390px;
+    background: url(../../hexscool_homework/images/headerBg.png) no-repeat center center/cover;
+    z-index: -10;  /*底圖壓底*/
+    margin: 0 auto; 
+    position: relative; 
+}
+.header{
+    position:sticky;
+    top:0px;
+    z-index: 30;
+}
+h2{
+    font-size: 36px;
+    width: 100%;
+    color: #1E1E1E;
+    font-weight: 600;
+    letter-spacing: .02em;
+    line-height: 130%; /* 43.2px */
+    display: block;
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 25px 150px;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+}
+.courseList {  /*課程資訊*/
+    display: flex;
+    padding: 60px;
+    justify-content:center;
+}
+.courseList > li {
+    width: 320px;
+    padding: 20px;
+    margin: 0 15px;
+    background: #FFF;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.16);
+}
+.courseList img{
+    display: block;
+    margin: 0 auto;
+}
+.courseList li .jq{
+    margin: 45px auto;
+}
+.courseList h4{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 120%; /* 24px */
+    text-align: center;
+    margin: 5px 0 15px;
+}
+.courseList p{
+    width: 310px;
+    color: #00251A;
+    font-weight: 400;
+    line-height: 155%; /*課程資訊結束*/
+}
+caption{
+    font-size: 24px; /*比較區*/
+    font-weight: 600;
+    line-height: 130%; 
+    text-align: center;
+    margin-bottom: 40px;
+}
+.compareSec table{
+    width: 920px;
+    margin: 0 auto 70px;
+}
+.compareSec table tbody th, td{
+    color: #00251A;
+    text-align: left;
+    letter-spacing: 0.02em;
+    padding: 12px 0px;
+    text-indent: 40px;
+    border-bottom: 1px solid #CCC;;
+}
+.compareSec table tbody th{
+    border-top: 1px solid #CCC;
+    font-weight: 600;
+    background-color: #eff1ed80;
+}
+.compareSec table tbody tr:hover{
+    background-color: #eff1ed40;
+}
+.compareSec table tbody .better{
+    color: #00cc99;
+    font-weight: 600;
+}
+.submitSec{ /*資料表單*/
+    background: linear-gradient(180deg, #00654c, #009670);
+    padding: 40px;
+}
+.submitSec h3{
+    font-size: 24px;
+    font-weight: 600;
+    color: #FFF;
+    line-height: 1.5; 
+    text-align: center;
+    margin-bottom: 50px;
+}
+.submitSec label{
+    color: #FFF;
+    line-height: 1.4;
+    font-size: 14px;
+}
+.studentInfo{
+    max-width: 860px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+#submitLeft{
+    width:420px;
+    float:left;
+}
+#submitRight{
+    width:420px;
+    float: right;
+}
+.studentInfo textarea{
+    width: 420px;
+    height: 240px;
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 3px;
+    background: #FFF;
+    padding: 8px;
+    outline: #00654c;
+}
+input{
+    width: 420px;
+    height: 34px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 3px;
+    border: 1px solid #FFF;
+    background: #FFF;
+    padding: 0 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    outline: #00654c;
+}
+#submitBtn{ 
+    width: 90px;
+    height: 35px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    border: none;
+    color: #FFF;
+    background: #00cc99;
+    margin-top: 10px; 
+    float: right;   
+}
+#submitBtn:hover{
+    cursor: pointer;
+    background-color: transparent;
+    border: 1.5px solid #FFF;
+    color: #FFF;
+    transition: all 0.3s;
+}
+#submitBtn:active{
+    background-color:hwb(163 0% 85% / 0.206) ;
+}
+::placeholder {
+    color: #999;
+    line-height: 150%; /* 24px */
+    letter-spacing: 0.02em;
+}
+.contactUs{ /*表尾開始*/
+    background: #fff;
+    padding: 20px 50px;
+    overflow: hidden; /* 清除浮動 */
+}
+.contactUs img {
+    margin-top: 10px;
+}
+.contactUs ul{
+    float: right;
+    line-height: 1.5;
+}
+.contactUs ul a{
+    text-decoration: none;
+    color: #00cc99;
+}
